@@ -1,0 +1,16 @@
+
+<template>
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_4-of-12">
+            <lightning-input type="text" placeholder="Enter Account Name" onchange={handleAccountNameSearch}>
+            </lightning-input>
+        </div>
+    </div>
+    <br>
+    <lightning-datatable data={data} columns={columns} key-field="Id" onsave={handleAccountSave} 
+        sorted-by={sortBy} sorted-direction={sortDirection} hide-checkbox-column="true"
+        onsort = {handleAccountSort}>
+    </lightning-datatable>
+
+</template>
